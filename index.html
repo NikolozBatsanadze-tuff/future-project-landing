@@ -1,135 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Project - Next Gen Landing Page</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="futuretech.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AETHERIA — Next-Gen Smooth Experience</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS ფაილის დაკავშირება -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation Header -->
-    <header class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">Future<span>Tech</span></a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <!-- Glow Blobs & Mouse Follower -->
+  <div class="glow-blob blob-1"></div>
+  <div class="glow-blob blob-2"></div>
+  <div class="ambient-cursor" id="ambientCursor"></div>
 
-    <!-- 1. Hero -->
-    <section id="hero" class="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <h1>Build The Future With <span>Smart AI</span></h1>
-                <p>Empowering creators and developers with next-generation tools designed for high efficiency and seamless integration.</p>
-                <a href="#features" class="btn primary-btn">Explore Features</a>
-            </div>
-            <div class="hero-card">
-                <i class="fa-solid fa-microchip hero-icon"></i>
-                <h3>AI Core System</h3>
-                <p>Status: Active</p>
-            </div>
+  <!-- Header -->
+  <header class="header-nav">
+    <div class="nav-inner">
+      <a href="#hero" class="logo">AETHERIA<span>.</span></a>
+      <nav class="nav-links">
+        <a href="#hero">მთავარი</a>
+        <a href="#about">ჩვენს შესახებ</a>
+        <a href="#features">Features</a>
+        <a href="#connect">Connect</a>
+      </nav>
+      <a href="#connect" class="nav-cta">დაკავშირება</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== 1. HERO SECTION ==================== -->
+    <section class="section hero" id="hero">
+      <div class="container hero-grid">
+        
+        <div>
+          <span class="tag-badge">Next-Generation Interface</span>
+          <h1 class="hero-title">
+            ციფრული მომავლის <br>
+            <span class="gradient-text">Smooth & Ultra</span> განზომილება
+          </h1>
+          <p class="hero-desc">
+            სტანდარტულ შაბლონებს მიღმა: 120 FPS სითხისებრი ანიმაციები, მაღალი წარმადობა და ჰიპერ-თანამედროვე ესთეტიკა.
+          </p>
+          <div class="btn-group">
+            <a href="#features" class="btn btn-primary">აღმოაჩინე მეტი</a>
+            <a href="#connect" class="btn btn-glass">დაგვიკავშირდი</a>
+          </div>
         </div>
+
+        <div>
+          <div class="tilt-card" id="heroCard">
+            <div class="card-top">
+              <span class="badge-live"><span class="live-dot"></span> LIVE ENGINE</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">AETHER-X</span>
+            </div>
+            <div class="circle-radar">
+              <div class="radar-core"></div>
+            </div>
+            <div class="card-metrics">
+              <div class="metric-row">
+                <span>Rendering Pipeline</span>
+                <strong>120 FPS Direct</strong>
+              </div>
+              <div class="metric-row">
+                <span>Latency Response</span>
+                <strong>0.4ms Instant</strong>
+              </div>
+              <div class="metric-row">
+                <span>Architecture</span>
+                <strong>Quantum Mesh</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <!-- 2. About  -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About The Project</h2>
-                <p>We combine modern web technologies with artificial intelligence to deliver exceptional user experiences.</p>
-            </div>
-            <div class="about-stats">
-                <div class="stat-item">
-                    <h3>99.9%</h3>
-                    <p>Uptime Guaranteed</p>
-                </div>
-                <div class="stat-item">
-                    <h3>10x</h3>
-                    <p>Faster Deployment</p>
-                </div>
-                <div class="stat-item">
-                    <h3>24/7</h3>
-                    <p>Automated Support</p>
-                </div>
-            </div>
+    <!-- ==================== 2. ABOUT SECTION ==================== -->
+    <section class="section" id="about">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="tag-badge">ჩვენს შესახებ</span>
+          <h2 class="section-title">რატომ განსხვავდება <span class="gradient-text">ყველასგან?</span></h2>
+          <p class="section-desc">მათემატიკური სიზუსტე და ხელოვნება ერთიან ციფრულ ეკოსისტემაში.</p>
         </div>
+
+        <div class="counters-bar">
+          <div>
+            <span class="counter-value" data-val="99.9">0</span><span class="counter-suffix">%</span>
+            <div class="counter-label">სტაბილური წარმადობა</div>
+          </div>
+          <div>
+            <span class="counter-value" data-val="120">0</span><span class="counter-suffix">FPS</span>
+            <div class="counter-label">სითხისებრი ინტერაქცია</div>
+          </div>
+          <div>
+            <span class="counter-value" data-val="10">0</span><span class="counter-suffix">X</span>
+            <div class="counter-label">სიჩქარის გაუმჯობესება</div>
+          </div>
+        </div>
+
+        <div class="about-cards-grid">
+          <div class="about-card">
+            <div class="about-card-icon">⚡</div>
+            <h3>მომენტალური რეაგირება</h3>
+            <p>ოპტიმიზებული კოდი და ნულოვანი დაყოვნება ნებისმიერ მოწყობილობაზე.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">💎</div>
+            <h3>Frosted Glass დიზაინი</h3>
+            <p>ფრთხილად შერჩეული შუქჩრდილები, დაბურული შუშის ეფექტები და თანამედროვე ბადე.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🪐</div>
+            <h3>სივრცითი განცდა</h3>
+            <p>3D ჰაპტიკური პერსპექტივა, რომელიც ცოცხლდება მაუსის მოძრაობასთან ერთად.</p>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <!-- 3. Features  -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>Key Features</h2>
-                <p>Discover what makes our platform stand out from the rest.</p>
-            </div>
-            <div class="features-grid">
-                <!-- Card 1 -->
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>Lightning Fast</h3>
-                    <p>Optimized architecture ensures instant responses and high-performance user interactions.</p>
-                </div>
-                <!-- Card 2 -->
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3>Ultra Secure</h3>
-                    <p>End-to-end encryption with enterprise-grade data protection principles built-in.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                    <h3>Fully Responsive</h3>
-                    <p>Flawless adaptivity across all mobile, tablet, and widescreen desktop devices.</p>
-                </div>
-            </div>
+    <!-- ==================== 3. FEATURES (Bento Grid) ==================== -->
+    <section class="section" id="features">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="tag-badge">Features</span>
+          <h2 class="section-title">ინოვაციური <span class="gradient-text">შესაძლებლობები</span></h2>
+          <p class="section-desc">ასიმეტრიული Bento Grid არქიტექტურა თითოეული დეტალისთვის.</p>
         </div>
+
+        <div class="bento-grid">
+          <div class="bento-card bento-span-2">
+            <div class="bento-tag">ინტერაქტივი</div>
+            <h3>სითხისებრი დინამიკური განათება</h3>
+            <p>სინათლის წყარო ავტონომიურად მიჰყვება თქვენს მოძრაობას და ქმნის სიღრმის შეგრძნებას რეალურ დროში.</p>
+          </div>
+
+          <div class="bento-card">
+            <div class="bento-tag">ტექნოლოგია</div>
+            <h3>Zero Dependency</h3>
+            <p>სუფთა, 100% Vanilla კოდი ზედმეტი მძიმე ბიბლიოთეკების გარეშე.</p>
+          </div>
+
+          <div class="bento-card">
+            <div class="bento-tag">არქიტექტურა</div>
+            <h3>3D Gyro Perspective</h3>
+            <p>ბარათები რეალურ დროში ითვლიან კუთხეებს კურსორის კოორდინატებზე.</p>
+          </div>
+
+          <div class="bento-card bento-span-2">
+            <div class="bento-tag">მობილური ოპტიმიზაცია</div>
+            <h3>სრული ადაპტირება</h3>
+            <p>იდეალური ვიზუალი და პერფორმანსი როგორც მობილურ ტელეფონებზე, ასევე ულტრა-ფართო ეკრანებზე.</p>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <!-- 4. Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Get In Touch</h2>
-                <p>Have questions? Send us a message and we will respond promptly.</p>
+    <!-- ==================== 4. CONNECT SECTION ==================== -->
+    <section class="section" id="connect">
+      <div class="container">
+        <div class="connect-card">
+          <div class="connect-grid">
+            
+            <div>
+              <span class="tag-badge">Connect</span>
+              <h2 class="connect-title">დაიწყე ახალი პროექტი <span class="gradient-text">დღესვე</span></h2>
+              <p class="connect-desc">
+                გაქვთ იდეა ან გსურთ არსებული საიტის ახალ საფეხურზე აყვანა? მოგვწერეთ შეტყობინება.
+              </p>
+
+              <div class="contact-item">
+                <div class="icon">✉</div>
+                <div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">Email Direct</div>
+                  <strong>hello@aetheria.ge</strong>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="icon">☎</div>
+                <div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">Hotline</div>
+                  <strong>+995 (32) 200 00 00</strong>
+                </div>
+              </div>
             </div>
-            <form id="contactForm" class="contact-form">
-                <div class="input-group">
-                    <input type="text" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="input-group">
-                    <input type="email" id="email" placeholder="Your Email" required>
-                </div>
-                <div class="input-group">
-                    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="btn primary-btn">Send Message</button>
-                <div id="formResponse" class="form-response"></div>
+
+            <!-- Form -->
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="userName">თქვენი სახელი</label>
+                <input type="text" id="userName" placeholder="გიორგი ბერიძე" required>
+              </div>
+
+              <div class="form-group">
+                <label for="userEmail">ელექტრონული ფოსტა</label>
+                <input type="email" id="userEmail" placeholder="giorgi@company.ge" required>
+              </div>
+
+              <div class="form-group">
+                <label for="userMessage">შეტყობინება</label>
+                <textarea id="userMessage" rows="4" placeholder="მოგვიყევით მოკლედ თქვენი იდეის შესახებ..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit">შეტყობინების გაგზავნა</button>
             </form>
+
+          </div>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 Future Project. All rights reserved.</p>
-            <div class="socials">
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 AETHERIA LABS. ყველა უფლება დაცულია.</p>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="toastMsg">✓ შეტყობინება წარმატებით გაიგზავნა!</div>
+
+  <!-- JavaScript ფაილის დაკავშირება -->
+  <script src="script.js"></script>
 </body>
 </html>
