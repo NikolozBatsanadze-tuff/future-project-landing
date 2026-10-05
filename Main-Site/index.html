@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Project - Next Gen Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="futuretech.jpg">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Future<span>Tech</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. Hero -->
+    <section id="hero" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Build The Future With <span>Smart AI</span></h1>
+                <p>Empowering creators and developers with next-generation tools designed for high efficiency and seamless integration.</p>
+                <a href="#features" class="btn primary-btn">Explore Features</a>
+            </div>
+            <div class="hero-card">
+                <i class="fa-solid fa-microchip hero-icon"></i>
+                <h3>AI Core System</h3>
+                <p>Status: Active</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. About  -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About The Project</h2>
+                <p>We combine modern web technologies with artificial intelligence to deliver exceptional user experiences.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <h3>99.9%</h3>
+                    <p>Uptime Guaranteed</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10x</h3>
+                    <p>Faster Deployment</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Automated Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Features  -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Key Features</h2>
+                <p>Discover what makes our platform stand out from the rest.</p>
+            </div>
+            <div class="features-grid">
+                <!-- Card 1 -->
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Lightning Fast</h3>
+                    <p>Optimized architecture ensures instant responses and high-performance user interactions.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Ultra Secure</h3>
+                    <p>End-to-end encryption with enterprise-grade data protection principles built-in.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <h3>Fully Responsive</h3>
+                    <p>Flawless adaptivity across all mobile, tablet, and widescreen desktop devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Have questions? Send us a message and we will respond promptly.</p>
+            </div>
+            <form id="contactForm" class="contact-form">
+                <div class="input-group">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="input-group">
+                    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn">Send Message</button>
+                <div id="formResponse" class="form-response"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Future Project. All rights reserved.</p>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
