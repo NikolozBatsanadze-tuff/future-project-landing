@@ -1,240 +1,421 @@
 <!DOCTYPE html>
-<html lang="ka">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AETHERIA — Next-Gen Smooth Experience</title>
+  <title>AETHEREA — Next-Generation Spatial AI</title>
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-
-  <!-- CSS ფაილის დაკავშირება -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="aetherea.jpg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Glow Blobs & Mouse Follower -->
-  <div class="glow-blob blob-1"></div>
-  <div class="glow-blob blob-2"></div>
-  <div class="ambient-cursor" id="ambientCursor"></div>
+  <!-- Ambient Background Lighting -->
+  <div class="ambient-glow glow-cyan"></div>
+  <div class="ambient-glow glow-purple"></div>
+  <div class="cursor-light" id="cursorLight"></div>
 
-  <!-- Header -->
-  <header class="header-nav">
-    <div class="nav-inner">
-      <a href="#hero" class="logo">AETHERIA<span>.</span></a>
-      <nav class="nav-links">
-        <a href="#hero">მთავარი</a>
-        <a href="#about">ჩვენს შესახებ</a>
-        <a href="#features">Features</a>
-        <a href="#connect">Connect</a>
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#hero" class="brand">
+        <span class="brand-mark">◈</span>
+        <span class="brand-name">AETHEREA</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
-      <a href="#connect" class="nav-cta">დაკავშირება</a>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-sm btn-primary">Get Started</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main>
-    <!-- ==================== 1. HERO SECTION ==================== -->
-    <section class="section hero" id="hero">
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="section hero-section" id="hero">
       <div class="container hero-grid">
         
-        <div>
-          <span class="tag-badge">Next-Generation Interface</span>
+        <div class="hero-content">
+          <div class="pill-badge">
+            <span class="pulse-dot"></span>
+            <span>AETHEREA Neural Engine v4.2</span>
+          </div>
+
           <h1 class="hero-title">
-            ციფრული მომავლის <br>
-            <span class="gradient-text">Smooth & Ultra</span> განზომილება
+            The Neural Matrix of <br>
+            <span class="gradient-text">Autonomous AI</span>
           </h1>
-          <p class="hero-desc">
-            სტანდარტულ შაბლონებს მიღმა: 120 FPS სითხისებრი ანიმაციები, მაღალი წარმადობა და ჰიპერ-თანამედროვე ესთეტიკა.
+
+          <p class="hero-subtitle">
+            Pioneering the next frontier in spatial computing and neural cognition. 
+            Deliver ultra-low latency intelligence across distributed global networks with zero overhead.
           </p>
-          <div class="btn-group">
-            <a href="#features" class="btn btn-primary">აღმოაჩინე მეტი</a>
-            <a href="#connect" class="btn btn-glass">დაგვიკავშირდი</a>
-          </div>
-        </div>
 
-        <div>
-          <div class="tilt-card" id="heroCard">
-            <div class="card-top">
-              <span class="badge-live"><span class="live-dot"></span> LIVE ENGINE</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">AETHER-X</span>
+          <div class="hero-cta-group">
+            <a href="#features" class="btn btn-primary">Explore Platform</a>
+            <a href="#contact" class="btn btn-glass">Request API Access</a>
+          </div>
+
+          <div class="hero-stats-mini">
+            <div class="mini-stat">
+              <strong>99.99%</strong>
+              <span>Uptime SLA</span>
             </div>
-            <div class="circle-radar">
-              <div class="radar-core"></div>
+            <div class="mini-divider"></div>
+            <div class="mini-stat">
+              <strong>&lt; 0.8ms</strong>
+              <span>Edge Latency</span>
             </div>
-            <div class="card-metrics">
-              <div class="metric-row">
-                <span>Rendering Pipeline</span>
-                <strong>120 FPS Direct</strong>
-              </div>
-              <div class="metric-row">
-                <span>Latency Response</span>
-                <strong>0.4ms Instant</strong>
-              </div>
-              <div class="metric-row">
-                <span>Architecture</span>
-                <strong>Quantum Mesh</strong>
-              </div>
+            <div class="mini-divider"></div>
+            <div class="mini-stat">
+              <strong>500M+</strong>
+              <span>Daily Inferences</span>
             </div>
           </div>
         </div>
 
-      </div>
-    </section>
-
-    <!-- ==================== 2. ABOUT SECTION ==================== -->
-    <section class="section" id="about">
-      <div class="container">
-        
-        <div class="section-header">
-          <span class="tag-badge">ჩვენს შესახებ</span>
-          <h2 class="section-title">რატომ განსხვავდება <span class="gradient-text">ყველასგან?</span></h2>
-          <p class="section-desc">მათემატიკური სიზუსტე და ხელოვნება ერთიან ციფრულ ეკოსისტემაში.</p>
-        </div>
-
-        <div class="counters-bar">
-          <div>
-            <span class="counter-value" data-val="99.9">0</span><span class="counter-suffix">%</span>
-            <div class="counter-label">სტაბილური წარმადობა</div>
-          </div>
-          <div>
-            <span class="counter-value" data-val="120">0</span><span class="counter-suffix">FPS</span>
-            <div class="counter-label">სითხისებრი ინტერაქცია</div>
-          </div>
-          <div>
-            <span class="counter-value" data-val="10">0</span><span class="counter-suffix">X</span>
-            <div class="counter-label">სიჩქარის გაუმჯობესება</div>
-          </div>
-        </div>
-
-        <div class="about-cards-grid">
-          <div class="about-card">
-            <div class="about-card-icon">⚡</div>
-            <h3>მომენტალური რეაგირება</h3>
-            <p>ოპტიმიზებული კოდი და ნულოვანი დაყოვნება ნებისმიერ მოწყობილობაზე.</p>
-          </div>
-          <div class="about-card">
-            <div class="about-card-icon">💎</div>
-            <h3>Frosted Glass დიზაინი</h3>
-            <p>ფრთხილად შერჩეული შუქჩრდილები, დაბურული შუშის ეფექტები და თანამედროვე ბადე.</p>
-          </div>
-          <div class="about-card">
-            <div class="about-card-icon">🪐</div>
-            <h3>სივრცითი განცდა</h3>
-            <p>3D ჰაპტიკური პერსპექტივა, რომელიც ცოცხლდება მაუსის მოძრაობასთან ერთად.</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 3. FEATURES (Bento Grid) ==================== -->
-    <section class="section" id="features">
-      <div class="container">
-        
-        <div class="section-header">
-          <span class="tag-badge">Features</span>
-          <h2 class="section-title">ინოვაციური <span class="gradient-text">შესაძლებლობები</span></h2>
-          <p class="section-desc">ასიმეტრიული Bento Grid არქიტექტურა თითოეული დეტალისთვის.</p>
-        </div>
-
-        <div class="bento-grid">
-          <div class="bento-card bento-span-2">
-            <div class="bento-tag">ინტერაქტივი</div>
-            <h3>სითხისებრი დინამიკური განათება</h3>
-            <p>სინათლის წყარო ავტონომიურად მიჰყვება თქვენს მოძრაობას და ქმნის სიღრმის შეგრძნებას რეალურ დროში.</p>
-          </div>
-
-          <div class="bento-card">
-            <div class="bento-tag">ტექნოლოგია</div>
-            <h3>Zero Dependency</h3>
-            <p>სუფთა, 100% Vanilla კოდი ზედმეტი მძიმე ბიბლიოთეკების გარეშე.</p>
-          </div>
-
-          <div class="bento-card">
-            <div class="bento-tag">არქიტექტურა</div>
-            <h3>3D Gyro Perspective</h3>
-            <p>ბარათები რეალურ დროში ითვლიან კუთხეებს კურსორის კოორდინატებზე.</p>
-          </div>
-
-          <div class="bento-card bento-span-2">
-            <div class="bento-tag">მობილური ოპტიმიზაცია</div>
-            <h3>სრული ადაპტირება</h3>
-            <p>იდეალური ვიზუალი და პერფორმანსი როგორც მობილურ ტელეფონებზე, ასევე ულტრა-ფართო ეკრანებზე.</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 4. CONNECT SECTION ==================== -->
-    <section class="section" id="connect">
-      <div class="container">
-        <div class="connect-card">
-          <div class="connect-grid">
+        <!-- 3D Interactive Card Showcase -->
+        <div class="hero-visual">
+          <div class="neural-card" id="heroCard">
+            <div class="card-glow-reflection"></div>
             
-            <div>
-              <span class="tag-badge">Connect</span>
-              <h2 class="connect-title">დაიწყე ახალი პროექტი <span class="gradient-text">დღესვე</span></h2>
-              <p class="connect-desc">
-                გაქვთ იდეა ან გსურთ არსებული საიტის ახალ საფეხურზე აყვანა? მოგვწერეთ შეტყობინება.
+            <div class="card-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="card-sys-status">CORE_CLUSTER // ONLINE</span>
+              <span class="badge-quantum">QUANTUM</span>
+            </div>
+
+            <div class="radar-visual-box">
+              <div class="radar-ring r1"></div>
+              <div class="radar-ring r2"></div>
+              <div class="radar-ring r3"></div>
+              <div class="radar-emitter">
+                <span class="emitter-core">◈</span>
+              </div>
+            </div>
+
+            <div class="card-telemetry">
+              <div class="telemetry-item">
+                <span>Model Latency</span>
+                <strong class="color-cyan">0.72 ms</strong>
+              </div>
+              <div class="telemetry-item">
+                <span>Memory Bandwidth</span>
+                <strong class="color-purple">3.2 TB/s</strong>
+              </div>
+              <div class="telemetry-item">
+                <span>Threat Defense</span>
+                <strong class="color-emerald">100% Encrypted</strong>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <span class="card-footer-pulse"></span>
+              <span>All Neural Pipelines Operational</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        
+        <div class="section-heading">
+          <span class="section-tag">Pioneering AI</span>
+          <h2 class="section-title">Built for Modern <span class="gradient-text">Engineers & Creators</span></h2>
+          <p class="section-desc">
+            We merge high-dimensional mathematical algorithms with elegant systems engineering to empower the next wave of autonomous software.
+          </p>
+        </div>
+
+        <!-- Animated Number Counters -->
+        <div class="stats-counter-strip" id="statsStrip">
+          <div class="stat-counter-cell">
+            <div class="stat-counter-val">
+              <span class="counter-number" data-target="99.99">0</span>
+              <span class="stat-symbol">%</span>
+            </div>
+            <p class="stat-counter-label">Precision Accuracy</p>
+          </div>
+          <div class="strip-divider"></div>
+          <div class="stat-counter-cell">
+            <div class="stat-counter-val">
+              <span class="counter-number" data-target="10">0</span>
+              <span class="stat-symbol">X</span>
+            </div>
+            <p class="stat-counter-label">Inference Acceleration</p>
+          </div>
+          <div class="strip-divider"></div>
+          <div class="stat-counter-cell">
+            <div class="stat-counter-val">
+              <span class="counter-number" data-target="150">0</span>
+              <span class="stat-symbol">+</span>
+            </div>
+            <p class="stat-counter-label">Global Edge PoPs</p>
+          </div>
+          <div class="strip-divider"></div>
+          <div class="stat-counter-cell">
+            <div class="stat-counter-val">
+              <span class="counter-number" data-target="24">0</span>
+              <span class="stat-symbol">/7</span>
+            </div>
+            <p class="stat-counter-label">Autonomous Self-Healing</p>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="about-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Micro-Second Optimization</h3>
+            <p>Every algorithm is compiled directly into low-level machine instructions, eradicating runtime overhead.</p>
+          </div>
+
+          <div class="about-card">
+            <div class="about-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h3>Zero Dependency Core</h3>
+            <p>Built completely without third-party bottlenecks. Clean, robust, and designed to endure heavy enterprise loads.</p>
+          </div>
+
+          <div class="about-card">
+            <div class="about-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3>Continuous Cognitive Sync</h3>
+            <p>Models adapt and synchronize states effortlessly across peer nodes with consensus verification.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== FEATURES SECTION ==================== -->
+    <section class="section features-section" id="features">
+      <div class="container">
+        
+        <div class="section-heading">
+          <span class="section-tag">Key Capabilities</span>
+          <h2 class="section-title">The Three Pillars of <span class="gradient-text">AETHEREA</span></h2>
+          <p class="section-desc">
+            Engineered from ground zero for maximum throughput, bulletproof protection, and cognitive brilliance.
+          </p>
+        </div>
+
+        <div class="features-trio">
+          
+          <!-- Feature 1: Speed -->
+          <div class="feature-box" data-tilt>
+            <div class="feature-glow"></div>
+            <div class="feature-top">
+              <div class="feature-icon speed">
+                <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <span class="feature-badge">SPEED</span>
+            </div>
+            <h3 class="feature-name">Sub-Millisecond Execution</h3>
+            <p class="feature-detail">
+              Execute hyper-scale matrix calculations faster than human perception. Our decentralized tensor pipeline guarantees unyielding 120 FPS responses.
+            </p>
+            <ul class="feature-list">
+              <li><span>✓</span> Direct GPU hardware passthrough</li>
+              <li><span>✓</span> Ultra-parallel batch streaming</li>
+              <li><span>✓</span> Dynamic cache warming</li>
+            </ul>
+          </div>
+
+          <!-- Feature 2: Security -->
+          <div class="feature-box" data-tilt>
+            <div class="feature-glow"></div>
+            <div class="feature-top">
+              <div class="feature-icon security">
+                <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <span class="feature-badge">SECURITY</span>
+            </div>
+            <h3 class="feature-name">Zero-Trust Quantum Cryptography</h3>
+            <p class="feature-detail">
+              Every data point is encapsulated in post-quantum cryptographic containers. Safeguard critical proprietary intelligence with zero data leak vectors.
+            </p>
+            <ul class="feature-list">
+              <li><span>✓</span> End-to-end homomorphic encryption</li>
+              <li><span>✓</span> Ephemeral tokenized signatures</li>
+              <li><span>✓</span> Automated compliance telemetry</li>
+            </ul>
+          </div>
+
+          <!-- Feature 3: Intelligence -->
+          <div class="feature-box" data-tilt>
+            <div class="feature-glow"></div>
+            <div class="feature-top">
+              <div class="feature-icon intelligence">
+                <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </div>
+              <span class="feature-badge">INTELLIGENCE</span>
+            </div>
+            <h3 class="feature-name">Autonomous Spatial Reasoning</h3>
+            <p class="feature-detail">
+              Beyond simple text predictions. AETHEREA constructs continuous multi-modal mental models capable of solving complex multi-step real-world problems.
+            </p>
+            <ul class="feature-list">
+              <li><span>✓</span> Recursive self-refining logic</li>
+              <li><span>✓</span> Multimodal spatial perception</li>
+              <li><span>✓</span> Contextual semantic memory</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        
+        <div class="contact-wrapper">
+          <div class="contact-grid">
+            
+            <div class="contact-intro">
+              <span class="section-tag">Direct Uplink</span>
+              <h2 class="contact-heading">Deploy Intelligence <span class="gradient-text">At Scale</span></h2>
+              <p class="contact-summary">
+                Have questions about our dedicated API clusters, bespoke models, or enterprise architecture? Our engineers respond within 24 hours.
               </p>
 
-              <div class="contact-item">
-                <div class="icon">✉</div>
-                <div>
-                  <div style="font-size: 0.8rem; color: var(--text-muted);">Email Direct</div>
-                  <strong>hello@aetheria.ge</strong>
+              <div class="direct-channels">
+                <div class="channel-card">
+                  <div class="channel-icon">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </div>
+                  <div>
+                    <span class="channel-type">Electronic Mail</span>
+                    <strong class="channel-val">enterprise@aetherea.ai</strong>
+                  </div>
                 </div>
-              </div>
 
-              <div class="contact-item">
-                <div class="icon">☎</div>
-                <div>
-                  <div style="font-size: 0.8rem; color: var(--text-muted);">Hotline</div>
-                  <strong>+995 (32) 200 00 00</strong>
+                <div class="channel-card">
+                  <div class="channel-icon">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div>
+                    <span class="channel-type">Headquarters</span>
+                    <strong class="channel-val">San Francisco, CA • Global Edge</strong>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <!-- Form -->
-            <form id="contactForm">
-              <div class="form-group">
-                <label for="userName">თქვენი სახელი</label>
-                <input type="text" id="userName" placeholder="გიორგი ბერიძე" required>
-              </div>
+            <!-- Validated Contact Form -->
+            <div class="contact-form-card">
+              <form id="contactForm" novalidate>
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="nameInput">Full Name</label>
+                    <input type="text" id="nameInput" placeholder="Jane Doe" autocomplete="name">
+                    <span class="field-error" id="nameError"></span>
+                  </div>
 
-              <div class="form-group">
-                <label for="userEmail">ელექტრონული ფოსტა</label>
-                <input type="email" id="userEmail" placeholder="giorgi@company.ge" required>
-              </div>
+                  <div class="form-group">
+                    <label for="emailInput">Business Email</label>
+                    <input type="email" id="emailInput" placeholder="jane@company.com" autocomplete="email">
+                    <span class="field-error" id="emailError"></span>
+                  </div>
+                </div>
 
-              <div class="form-group">
-                <label for="userMessage">შეტყობინება</label>
-                <textarea id="userMessage" rows="4" placeholder="მოგვიყევით მოკლედ თქვენი იდეის შესახებ..." required></textarea>
-              </div>
+                <div class="form-group">
+                  <label for="subjectSelect">Inquiry Domain</label>
+                  <select id="subjectSelect">
+                    <option value="enterprise">Enterprise API Deployment</option>
+                    <option value="models">Custom Model Fine-Tuning</option>
+                    <option value="partnership">Strategic Technology Partnership</option>
+                    <option value="general">General Advisory</option>
+                  </select>
+                </div>
 
-              <button type="submit" class="btn btn-primary btn-submit">შეტყობინების გაგზავნა</button>
-            </form>
+                <div class="form-group">
+                  <label for="messageInput">Project Brief</label>
+                  <textarea id="messageInput" rows="4" placeholder="Briefly describe your workload requirements and estimated throughput..."></textarea>
+                  <span class="field-error" id="messageError"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                  <span class="btn-loader" id="btnLoader"></span>
+                  <span class="btn-text" id="btnText">Transmit Message</span>
+                  <svg class="btn-arrow" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </form>
+            </div>
 
           </div>
         </div>
+
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Sleek Footer -->
   <footer class="footer">
-    <div class="container">
-      <p>© 2026 AETHERIA LABS. ყველა უფლება დაცულია.</p>
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="#hero" class="brand">
+          <span class="brand-mark">◈</span>
+          <span class="brand-name">AETHEREA</span>
+        </a>
+        <p class="footer-tagline">Architecting the next intelligence singularity.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Overview</a>
+        <a href="#about">About</a>
+        <a href="#features">Architecture</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-right">
+        <div class="system-status">
+          <span class="status-indicator"></span>
+          <span>Core Clusters: Healthy</span>
+        </div>
+        <p class="footer-copy">© 2026 AETHEREA TECHNOLOGIES INC. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
-  <!-- Toast Notification -->
-  <div class="toast-msg" id="toastMsg">✓ შეტყობინება წარმატებით გაიგზავნა!</div>
+  <!-- Toast Notification Message -->
+  <div class="toast-card" id="toastCard">
+    <div class="toast-icon">✓</div>
+    <div class="toast-body">
+      <h4 id="toastTitle">Transmission Successful</h4>
+      <p id="toastMessage">Your message has been dispatched to our engineering staff.</p>
+    </div>
+  </div>
 
-  <!-- JavaScript ფაილის დაკავშირება -->
   <script src="script.js"></script>
 </body>
 </html>
